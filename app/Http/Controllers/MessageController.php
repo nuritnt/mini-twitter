@@ -8,6 +8,7 @@ use App\Models\Message;
 class MessageController extends Controller
 {
     public function create() {
+
        // we create a new Message-Object
        $message = new Message();
        // we set the properties title and content
@@ -24,6 +25,7 @@ class MessageController extends Controller
     }
 
     public function showAll() {
+
        // gets all the entries from table messages
        // and gets an array of objects as a return value.
        // we store this return value in the variable $messages
@@ -42,6 +44,7 @@ class MessageController extends Controller
     }
 
     public function details($id) {
+
        // ask the database for the message with the ID that we got
        // as a parameter. It is the same ID that we used to
        // generate the links to the message details
@@ -55,4 +58,18 @@ class MessageController extends Controller
        return view('messageDetails', ['message' => $message]);
    }
 
+   public function delete($id) {
+
+       // ask the database for the message with the ID that we got
+       // as a parameter. It is the same ID that we used to
+       // generate the links to the message details
+       // and the same ID that web.php took out of the link.
+       // then we directly call the delete-method of
+       // the Message-Object that we get back from the
+       // findOrFail function.
+       $result = Message::findOrFail($id)->delete();
+
+       // after that we redirect to the message list again
+       return redirect('/messages');
+   }
 }
