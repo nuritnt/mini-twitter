@@ -19,4 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/create', [MessageController::class, 'create']);
 Route::get('/messages', [MessageController::class, 'showAll']);
+Route::get('/message/{id}', [MessageController::class, 'details']);
