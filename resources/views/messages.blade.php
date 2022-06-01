@@ -37,7 +37,7 @@
             <a href="/message/{{$message->id}}">{{ $message->title }}:</a>
         </span><br>
         <span>{{ $message->content }}</span><br>
-        <span>{{ $message->created_at->diffForHumans() }}</span>
+        <span>{{ $message->updated_at->diffForHumans() }}</span>
         <a href="/message/{{$message->id}}">Edit</a>
     </li>
 @endforeach
