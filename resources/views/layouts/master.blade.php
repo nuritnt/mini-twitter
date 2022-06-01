@@ -20,6 +20,6 @@
    @yield('content')
    <!-- hier wird die php Funktion date() aufgerufen mit dem Format-Pattern 'd.m.Y'
     und im html ausgegeben-->
-   <div><b>Dummy Footer: {{date('d.m.Y')}}</b></div>
+   <div><b>Dummy Footer: {{date('d.m.Y')}} - {{date('H:i')}}</b></div>
 </body>
 </html>
