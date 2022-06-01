@@ -80,7 +80,7 @@ class MessageController extends Controller
             'content' => 'required'
         ]);
 
-        $data = Message::find($id);
+        $data = Message::findOrFail($id);
         $data->title = $request->title;
         $data->content = $request->content;
         $data->save();
