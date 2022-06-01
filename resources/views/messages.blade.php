@@ -19,7 +19,7 @@
     <!-- this blade directive is necessary for all forms posts somewhere in beweeen the formtags -->
 
     @csrf
-    <button class="btn btn-primary" type="submit">Delete</button>
+    <button class="btn btn-primary" type="submit">Create</button>
 </form>
 
 

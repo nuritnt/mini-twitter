@@ -7,7 +7,7 @@ use App\Models\Message;
 
 class MessageController extends Controller
 {
-    public function create() {
+    public function create(Request $request) {
 
        // we create a new Message-Object
        $message = new Message();
