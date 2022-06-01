@@ -8,10 +8,14 @@
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
 @section('content')
 
-<h2>Message Details:</h2>
+<form action="/update/{{$message->id}}" method="post">
+    <input type="text" name="title" value="{{$message->title}}">
+    <input type="text" name="content" value="{{$message->content}}">
 
-<h3>{{$message->title}}</h3>
-<p>{{$message->content}}</p>
+    @csrf
+    <button type="submit">Update</button>
+</form>
+
 
 <form action="/message/{{$message->id}}" method="post">
 
