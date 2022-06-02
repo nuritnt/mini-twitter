@@ -11290,4 +11290,8 @@ body {
   font: 100% Helvetica, sans-serif;
   color: #333;
   background-color: rgb(193, 247, 229);
+  background-image: url("/img/birdy.png");
+}
+body img {
+  border-radius: 20px;
 }

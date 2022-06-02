@@ -10,6 +10,8 @@
 <!-- section content is used in messages.blade.php -->
 @section('content')
 
+<img src="{{ asset('img/kingfisher.jpeg') }}">
+
 <h2>Create new message: </h2>
 
 <form action="/create" method="post">
